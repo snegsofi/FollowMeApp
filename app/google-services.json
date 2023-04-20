@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "888910491108",
+    "project_id": "turismproject-a27c5",
+    "storage_bucket": "turismproject-a27c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888910491108:android:1a72ba97cf00dec5406bf1",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888910491108-q9b26ig4skqfrjv6ks0t20nrmaacc7kk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqMeDnzX9dSPzRm3gWMbqTTWM3bb0a8ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888910491108-q9b26ig4skqfrjv6ks0t20nrmaacc7kk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

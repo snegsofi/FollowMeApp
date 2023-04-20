@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Follow Me</string>
+    <string name="signup_label">Регистрация</string>
+    <string name="signin_label">Вход</string>
+    <string name="profileTitle">Профиль</string>
+    <string name="personalInformation">Персональные данные</string>
+    <string name="personalInformationName">Имя</string>
+    <string name="personalInformationSurname">Фамилия</string>
+    <string name="personalInformationLogin">Электронная почта</string>
+    <string name="personalInformationPassword">Пароль</string>
+    <string name="Settings">Настройки</string>
+    <string name="Language">Язык</string>
+    <string name="russianLanguage">Русский</string>
+    <string name="englishLanguage">English</string>
+    <string name="exit">Выход</string>
+    <string name="logout">Выход из аккаунта</string>
+</resources>
