@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="15dp">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -18,10 +18,11 @@
             android:background="@color/white"
             android:id="@+id/backFromSignup_btn"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:text="@string/signup_label"
             android:layout_weight="1"
@@ -43,7 +44,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="40dp"
         app:errorEnabled="true"
-        android:hint="firstname"
+        android:hint="имя"
         >
 
     <com.google.android.material.textfield.TextInputEditText
@@ -51,6 +52,8 @@
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:id="@+id/firstname_signup_EditText"
+        android:backgroundTint="@color/baby_powder"
+        android:inputType="textCapWords"
         />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,7 +66,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
         app:errorEnabled="true"
-        android:hint="lastname"
+        android:hint="фамилия"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -71,6 +74,8 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:id="@+id/lastname_signup_EditText"
+            android:backgroundTint="@color/baby_powder"
+            android:inputType="textCapWords"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,6 +96,8 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:id="@+id/email_signup_EditText"
+            android:backgroundTint="@color/baby_powder"
+            android:inputType="textEmailAddress"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -103,7 +110,8 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="5dp"
         app:errorEnabled="true"
-        android:hint="password"
+        android:hint="пароль"
+        app:endIconMode="password_toggle"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -112,6 +120,7 @@
             android:singleLine="true"
             android:id="@+id/password_signup_EditText"
             android:inputType="textPassword"
+            android:backgroundTint="@color/baby_powder"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -120,7 +129,7 @@
 
     <Button
         android:id="@+id/signup_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Зарегистрироваться"
         android:layout_marginLeft="30dp"
@@ -128,6 +137,8 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:textAllCaps="false"
+        android:backgroundTint="@color/penn_blue"
         />
+
 
 </LinearLayout>

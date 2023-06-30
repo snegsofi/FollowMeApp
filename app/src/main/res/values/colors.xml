@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#303030</color>
     <color name="grey_100">#858585</color>
+    <color name="penn_blue">#222362</color>
+    <color name="baby_powder">#F8F7F1</color>
+    <color name="xanthous">#F1B33B</color>
+    <color name="rufous">#AE230E</color>
 </resources>

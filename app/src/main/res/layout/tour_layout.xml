@@ -19,12 +19,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:id="@+id/tour_image"
+<!--                    <ImageView-->
+<!--                        android:id="@+id/tour_image"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="390dp"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        app:srcCompat="@drawable/ic_launcher_foreground"-->
+<!--                        />-->
+
+                    <androidx.viewpager.widget.ViewPager
                         android:layout_width="match_parent"
-                        android:layout_height="392dp"
-                        app:srcCompat="@drawable/ic_launcher_foreground"
-                        />
+                        android:layout_height="300dp"
+                        android:id="@+id/tour_view_pager"/>
 
                     <ImageButton
                         android:layout_width="wrap_content"
@@ -64,29 +70,6 @@
                     android:id="@+id/tour_name"
                     android:fontFamily="@font/cormorantgaramond_bold"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="5dp">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/location"
-                        android:layout_gravity="center"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/grey"
-                        android:text="Place"
-                        android:textSize="18dp"
-                        android:id="@+id/tour_place"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="3dp"/>
-                </LinearLayout>
-
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -95,6 +78,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/cormorantgaramond_bold"/>
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -105,27 +89,55 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/tour_description"/>
 
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="5dp">
+                    android:orientation="vertical"
+                    android:background="#f9f6ed">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Информация о месте"
+                        android:textSize="22dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"/>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="2">
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
 
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/location_on"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="Даты:"
-                            android:textSize="22dp"
-                            android:layout_marginLeft="3dp" />
+                            android:textColor="@color/grey"
+                            android:text="Place"
+                            android:textSize="18dp"
+                            android:id="@+id/tour_place"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="3dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/schedule"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -134,16 +146,23 @@
                             android:text="date"
                             android:textSize="20dp"
                             android:id="@+id/tour_date"
-                            android:layout_marginLeft="3dp"/>
+                            android:layout_marginLeft="3dp"
 
+                            android:layout_gravity="center"/>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        >
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/calendar"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -151,103 +170,119 @@
                             android:textColor="@color/black"
                             android:text="Продолжительность:"
                             android:textSize="22dp"
-                            android:layout_marginLeft="3dp"/>
+                            android:layout_marginLeft="3dp"
+                            android:layout_gravity="center"/>
 
-
-                        <LinearLayout
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:textColor="@color/grey"
+                            android:text="duration"
+                            android:textSize="20dp"
+                            android:id="@+id/tour_duration"
+                            android:layout_marginLeft="3dp"
+                            android:layout_gravity="center"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/grey"
-                                android:text="duration"
-                                android:textSize="20dp"
-                                android:id="@+id/tour_duration"
-                                android:layout_marginLeft="3dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/grey"
-                                android:text="дн."
-                                android:textSize="20dp"
-                                android:layout_marginLeft="3dp"/>
-                        </LinearLayout>
-
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey"
+                            android:text="дн."
+                            android:textSize="20dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_gravity="center"/>
 
                     </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/group"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="Группа: "
+                            android:textSize="22dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey"
+                            android:text="group"
+                            android:textSize="20dp"
+                            android:id="@+id/tour_group"
+                            android:layout_marginLeft="3dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey"
+                            android:text="чел."
+                            android:textSize="20dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/payments"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="Цена: "
+                            android:textSize="22dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey"
+                            android:text="price"
+                            android:textSize="20dp"
+                            android:id="@+id/tour_price"
+                            android:layout_marginLeft="3dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₽"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/grey"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Группа: "
-                    android:textSize="22dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="10dp"/>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/grey"
-                        android:text="group"
-                        android:textSize="20dp"
-                        android:id="@+id/tour_group"
-                        android:layout_marginLeft="3dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/grey"
-                        android:text="чел."
-                        android:textSize="20dp"
-                        android:layout_marginLeft="3dp"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Цена: "
-                    android:textSize="22dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="10dp"/>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/grey"
-                        android:text="price"
-                        android:textSize="20dp"
-                        android:id="@+id/tour_price"
-                        android:layout_marginLeft="3dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="₽"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="3dp"
-                        android:textColor="@color/grey"/>
-
-                </LinearLayout>
 
                 <Button
                     android:layout_width="wrap_content"
@@ -256,7 +291,8 @@
                     android:textAllCaps="false"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/btn_booking"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

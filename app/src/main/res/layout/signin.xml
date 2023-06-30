@@ -9,15 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="15dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/signin_label"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="40dp"
             android:layout_gravity="center"
             android:textSize="30dp"
             android:textColor="@color/grey"
@@ -26,11 +26,11 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/cross"
+            android:src="@drawable/ic_baseline_clear_35"
             android:background="@color/white"
             android:id="@+id/cancelSignin_btn"
             android:layout_gravity="center"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="20dp"/>
 
     </LinearLayout>
 
@@ -51,6 +51,8 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:id="@+id/email_signin_EditText"
+            android:backgroundTint="@color/baby_powder"
+            android:inputType="textEmailAddress"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -63,7 +65,8 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
         app:errorEnabled="true"
-        android:hint="password"
+        android:hint="пароль"
+        app:endIconMode="password_toggle"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -72,6 +75,7 @@
             android:singleLine="true"
             android:id="@+id/password_signin_EditText"
             android:inputType="textPassword"
+            android:backgroundTint="@color/baby_powder"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -87,6 +91,7 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:textAllCaps="false"
+        android:backgroundTint="@color/penn_blue"
         />
 
     <Button
@@ -99,6 +104,8 @@
         android:layout_marginRight="30dp"
         android:layout_gravity="center"
         android:textAllCaps="false"
+        android:backgroundTint="@color/baby_powder"
         />
 
 </LinearLayout>
+

@@ -63,7 +63,7 @@
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:layout_marginBottom="10dp"
-        android:id="@+id/surnameTextViewHome"/>/>
+        android:id="@+id/surnameTextViewHome"/>
 
     <View
         android:layout_width="match_parent"
@@ -87,59 +87,7 @@
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:layout_marginBottom="10dp"
-        android:id="@+id/loginTextViewHome"/>/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="23dp"
-        android:text="@string/Settings"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Language"
-        android:textSize="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/languageRadioGroup">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/russianLanguage"
-            android:textSize="18dp"
-            android:id="@+id/russianRadioButton"
-            android:checked="true"
-            android:buttonTint="@color/grey"
-            />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/englishLanguage"
-            android:textSize="18dp"
-            android:id="@+id/englishRadioButton"
-            android:buttonTint="@color/grey_100"/>
-
-    </RadioGroup>
+        android:id="@+id/loginTextViewHome"/>
 
     <View
         android:layout_width="match_parent"

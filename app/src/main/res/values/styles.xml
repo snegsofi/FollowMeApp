@@ -6,4 +6,15 @@
         <item name="android:textSize">14sp</item>
         <item name="chipBackgroundColor">@color/chips_background</item>
     </style>
+
+    <style name="customChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+
+        <item name="chipBackgroundColor">@color/chips_background</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/grey_100</item>
+        <item name="colorControlActivated">@color/rufous</item>
+    </style>
+
 </resources>

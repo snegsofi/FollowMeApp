@@ -6,13 +6,13 @@
         android:title=""/>
 
     <item
-        android:id="@+id/navigation_search"
-        android:icon="@drawable/search"
+        android:id="@+id/navigation_tour"
+        android:icon="@drawable/tour"
         android:title=""/>
 
     <item
-        android:id="@+id/navigation_tour"
-        android:icon="@drawable/tour"
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/favoritelogo"
         android:title=""/>
 
     <item
